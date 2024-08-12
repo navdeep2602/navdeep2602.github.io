@@ -460,7 +460,7 @@ footer {
     --------------------------
     ----- 4. Lead Styles -----
     --------------------------
-*/
+
 
 #lead {
     position: relative;
@@ -555,6 +555,108 @@ footer {
         transform: scale(1, 1);
     }
 }
+*/
+/* Lead Styles */
+#lead {
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 1080px;
+    background: url(../images/lead-bg.jpg) no-repeat center center/cover;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#lead-content {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h1 {
+        color: #fff;
+        font-weight: 900;
+        font-size: 4.5em;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        line-height: 1.2em;
+        white-space: nowrap; /* Prevents the text from wrapping */
+    }
+
+    h2 {
+        color: rgba(255, 255, 255, 0.75);
+        font-weight: 500;
+        font-size: 2.5em;
+        margin-top: 10px;
+    }
+
+    .btn-rounded-white {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1.1em;
+        font-weight: 500;
+        color: #333;
+        background-color: #fff;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .btn-rounded-white:hover {
+        color: #fff;
+        background-color: #333;
+    }
+}
+
+#lead-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+#lead-down {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    bottom: 20px;
+    color: #fff;
+
+    span {
+        cursor: pointer;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 255, 255, 0.75);
+        margin: 0 auto;
+        line-height: 34px; /* Aligns the icon within the circle */
+    }
+
+    i {
+        animation: pulsate 1.5s ease infinite;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 /*
     ---------------------------
