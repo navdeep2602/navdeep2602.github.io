@@ -574,21 +574,24 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    max-width: 100%; /* Ensures the content doesn't exceed the viewport width */
 
     h1 {
         color: #fff;
-        font-weight: 900;
-        font-size: 4.5em;
+        font-weight: 800;
+        font-size: 4em; /* Reduced slightly to fit in one line */
         text-transform: uppercase;
-        letter-spacing: 0.1em;
-        line-height: 1.2em;
+        letter-spacing: 0.05em;
+        line-height: 1.1em;
         white-space: nowrap; /* Prevents the text from wrapping */
+        overflow: hidden; /* Ensures no overflow issues */
+        text-overflow: ellipsis; /* Adds ellipsis if text is too long */
     }
 
     h2 {
         color: rgba(255, 255, 255, 0.75);
         font-weight: 500;
-        font-size: 2.5em;
+        font-size: 2.2em;
         margin-top: 10px;
     }
 
@@ -656,6 +659,7 @@ footer {
         transform: scale(1);
     }
 }
+
 
 
 /*
